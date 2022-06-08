@@ -1,6 +1,8 @@
 on:
   schedule:
     - cron:  '1 16 * * *'
+  push:
+    branch: [main]
 
 jobs:
   create_daily_plan_issue:
