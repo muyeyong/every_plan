@@ -1,0 +1,9 @@
+name: "Create Daily plan Issue"
+description: "automatic create daily plan issue for muyeyong/every-plan"
+inputs:
+  token:
+    description: "github token"
+    required: true
+runs:
+  using: "node12"
+  main: "./index.js"

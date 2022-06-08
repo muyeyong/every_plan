@@ -1,0 +1,17 @@
+on:
+  schedule:
+    - cron:  '1 16 * * *'
+
+jobs:
+  create_daily_plan_issue:
+    runs-on: ubuntu-latest
+    name: create daily plan issue
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install packages
+        run: npm install
+      - name: create daily plan issue action step
+        uses: ./ # Uses an action in the root directory
+        with:
+          token: ${{secrets.TOKEN}}
